@@ -1,0 +1,97 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.14);
+    padding: 0px 6px;
+    z-index: 1;
+    &__nav {
+        background-color: white;
+        z-index: 1;
+        padding: 8px 0px;
+        &__bar {
+            position: absolute;
+            right: 20px;
+            top: 12px;
+            display: none;
+            cursor: pointer;
+            @include forPhoneOnly {
+                display: block;
+            }
+            &__icon {
+                font-size: 27px;
+                color: dimgray;
+            }
+        }
+        &__link-list {
+            @include flexbox(center, space-between);
+            list-style-type: none;
+            &__left {
+                 :hover {
+                    background-color: rgb(194, 194, 194);
+                    cursor: pointer;
+                }
+                &__item {
+                    padding: 10px 16px;
+                    font-size: 16px;
+                    @include forPhoneOnly {
+                        padding: 10px 4px;
+                    }
+                    &__link {
+                        text-decoration: none;
+                        letter-spacing: 4px;
+                        color: black;
+                    }
+                }
+            }
+            &__right {
+                @include flexbox(space-evenly);
+                @include forPhoneOnly {
+                    z-index: -1;
+                    transform: translateY(-210%);
+                    transition: transform 2s ease;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 54px;
+                    flex-direction: column;
+                    background-color: white;
+                    right: 0;
+                    width: 100%;
+                    padding: 0px 8px;
+                    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.14);
+                }
+                &__item {
+                    padding: 12px 7px;
+                    @include forPhoneOnly {
+                        text-align: center;
+                        margin-bottom: 7px;
+                    }
+                    &__link {
+                        text-decoration: none;
+                        letter-spacing: 4px;
+                        color: black;
+                        font-size: 16px;
+                        padding: 10px 16px;
+                        @include forPhoneOnly {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                &__item:hover {
+                    background-color: rgb(194, 194, 194);
+                }
+            }
+            .active {
+                transition: transform 2s ease;
+                transform: translateY(0%);
+                visibility: visible;
+                @include forNavMenu {
+                    display: flex;
+                }
+            }
+            // .li-close {
+            //     display: none;
+            // }
+        }
+    }
+}

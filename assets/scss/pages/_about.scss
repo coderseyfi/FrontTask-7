@@ -1,0 +1,66 @@
+.main__second--sc__wrapper {
+    display: flex;
+    padding: 65px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    @include forPhoneOnly {
+        display: block;
+    }
+    &__left {
+        width: 49.999%;
+        max-width: 550px;
+        padding: 12px 24px;
+        @include forPhoneOnly {
+            display: none;
+        }
+        &__img {
+            width: 100%;
+            opacity: 0.7;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+    }
+    &__right {
+        width: 49.999%;
+        padding: 12px 24px;
+        @include forPhoneOnly {
+            width: 100%;
+        }
+        &__head {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 500;
+            letter-spacing: 4px;
+            margin: 15px 0px 60px 0px;
+        }
+        &__tradition {
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 4px;
+            margin: 20px 0px;
+        }
+        &__text--large {
+            margin: 15px 0;
+            font-size: 19px;
+            line-height: 1.5;
+            text-align: justify;
+            &__seasonal {
+                background-color: rgb(235, 235, 235);
+                padding: 4px 5px;
+            }
+        }
+        &__text--small {
+            margin: 15px 0;
+            font-size: 19px;
+            opacity: 0.6;
+            line-height: 1.5;
+            text-align: justify;
+            @include forTabletOnly {
+                display: none;
+            }
+            @include forPhoneOnly {
+                display: block;
+            }
+        }
+    }
+}

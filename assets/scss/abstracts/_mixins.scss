@@ -1,0 +1,23 @@
+@mixin flexbox($alignItems:center, $justifyContent:center) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin forPhoneOnly {
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin forTabletOnly {
+    @media only screen and (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin forNavMenu {
+    @media only screen and (min-width: 601px) {
+        @content;
+    }
+}

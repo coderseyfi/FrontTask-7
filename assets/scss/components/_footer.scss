@@ -1,0 +1,15 @@
+.footer {
+    &__gray-part {
+        width: 100%;
+        background-color: whitesmoke;
+        padding: 45px 0px;
+        &__text {
+            text-align: center;
+            margin: 10px 0px;
+            font-size: 15px;
+            &__link:hover {
+                color: #4CAF50;
+            }
+        }
+    }
+}

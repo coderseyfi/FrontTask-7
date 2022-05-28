@@ -1,0 +1,18 @@
+.main {
+    &__first--sc {
+        max-width: 1525px;
+        position: relative;
+        margin: 0 auto;
+        &__burger--img {
+            width: 100%;
+            &__div {
+                position: absolute;
+                font-size: 36px;
+                bottom: 4%;
+                left: 2%;
+                color: dimgray;
+                letter-spacing: 4px;
+            }
+        }
+    }
+}
